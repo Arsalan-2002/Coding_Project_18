@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import RateMovieButton from './RateMovieButton';
 import MovieSelector from './MovieSelector';
+import UploadButton from './UploadButton';
 import './App.css';
 
 const App = () => {
@@ -17,6 +18,7 @@ const App = () => {
           onSelectMovie={setSelectedMovie}
         />
         <RateMovieButton movie={selectedMovie} />
+        <UploadButton />
       </header>
     </div>
   );
