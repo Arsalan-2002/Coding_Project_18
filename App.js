@@ -1,17 +1,25 @@
-// src/App.js
-import React from 'react';
+import React, { useState } from 'react';
 import RateMovieButton from './RateMovieButton';
+import MovieSelector from './MovieSelector';
 import './App.css';
 
-function App() {
+const App = () => {
+  const [selectedMovie, setSelectedMovie] = useState('Inception');
+  const movies = ['Inception', 'Interstellar', 'The Dark Knight', 'Dunkirk'];
+
   return (
     <div className="App">
       <header className="App-header">
         <h1>Interactive Media Platform</h1>
-        <RateMovieButton movie="Inception" />
+        <MovieSelector
+          movies={movies}
+          selectedMovie={selectedMovie}
+          onSelectMovie={setSelectedMovie}
+        />
+        <RateMovieButton movie={selectedMovie} />
       </header>
     </div>
   );
-}
+};
 
 export default App;

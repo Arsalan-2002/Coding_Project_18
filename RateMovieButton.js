@@ -1,6 +1,5 @@
-// src/RateMovieButton.js
 import React, { useState } from 'react';
-import './RateMovieButton.css'; // optional for styling
+import './RateMovieButton.css'; 
 
 const RateMovieButton = ({ movie }) => {
   const [rating, setRating] = useState(0);
