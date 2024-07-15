@@ -12,13 +12,15 @@ const App = () => {
     <div className="App">
       <header className="App-header">
         <h1>Interactive Media Platform</h1>
-        <MovieSelector
-          movies={movies}
-          selectedMovie={selectedMovie}
-          onSelectMovie={setSelectedMovie}
-        />
-        <RateMovieButton movie={selectedMovie} />
-        <UploadButton />
+        <div className="toolbar">
+          <MovieSelector
+            movies={movies}
+            selectedMovie={selectedMovie}
+            onSelectMovie={setSelectedMovie}
+          />
+          <RateMovieButton movie={selectedMovie} />
+          <UploadButton />
+        </div>
       </header>
     </div>
   );
